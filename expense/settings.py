@@ -1,6 +1,8 @@
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-2=)s_idi@w4#40bk#cacn46k1^l!yqzjz=(_h+gam9e*vu@u=2'
 DEBUG = True
 
@@ -31,7 +33,7 @@ ROOT_URLCONF = 'expense.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
